@@ -43,6 +43,8 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+
+
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block;
 }
@@ -347,6 +349,10 @@ summary {
 
 template {
   display: none;
+}
+.word-color {
+  color:#0BCEAF;
+  font-weight: 800;
 }
 
 [hidden] {
