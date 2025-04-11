@@ -1,5 +1,25 @@
 #!/bin/python3
 
+#Problem 15
+"""
+Write a program that asks the user for four user defined numbers and outputs the average of the four
+Numbers.
+"""
+
+#Problem 14
+"""
+Write a program that will display the clothing depending on the wheather conditions, if it is cloudy
+and raining then it's "COLD" else if its cloudy and not raining then it is "MILD" else it is "HOT".Now
+if it is "COLD" dislpay a "Jacket and Boots", if it is mild display a "sweat shirt and sweat pant". If it
+is hot and the temperature is greater than 30 degrees display "Shorts and Sandals."
+"""
+Weather_Condition = float(input("Enter the Current Weather Condition"))
+if Weather_Condition == "Cloudy" and Weather_Condition == "rainy":
+    print("Wear Jacket and Boots")
+elif Weather_Condition == "Cloudy" and Weather_Condition == "Not rainy":
+    print("Sweat Shirt and Sweat pants")
+else:
+    print("")
 #Problem 13
 """
 Write a progam that will display the university you will be going to,based on the following conditinos:
