@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-57HD0G5PT6"></script>
+   <script>
+     window.dataLayer = window.dataLayer || [];
+     function gtag(){dataLayer.push(arguments);}
+     gtag('js', new Date());
+   
+     gtag('config', 'G-57HD0G5PT6');
+   </script>
+   <!-- Google tag (gtag.js) Ends-->  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chishibe's Resume</title>
+  <!-- Firebase App and Analytics SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-analytics.js"></script>
+  <!-- Favicon -->
+  <link href="./icons/Main Logo Gray Large.png" rel="icon">
+  <!-- Google Web Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+  <!-- Icon Font Stylesheet -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Libraries Stylesheet -->
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <!-- Customized Bootstrap Stylesheet -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom Stylesheet -->
+  <link href="css/style.css" rel="stylesheet">
+  <link href="css/Projects.css" rel="stylesheet">
+</head>
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+    <!--Spinner Start-->
+   <!-- <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div> -->
+    </div> 
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+        <a href="index.html" class="navbar-brand d-block d-lg-none">
+            <h1 class="text-primary fw-bold m-0">Chishibe</h1>
+        </a>
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="#home" class="nav-item nav-link active">Home</a>
+                <a href="#about" class="nav-item nav-link">About</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <a href="#service" class="nav-item nav-link">Services</a>
+            </div>
+            <a href="index.html" class="navbar-brand bg-secondary py-3 px-4 mx-3 d-none d-lg-block">
+                <h1 class="text-primary fw-bold m-0">Chishibe</h1>
+            </a>
+            <div class="navbar-nav me-auto py-0">
+                <a href="./Projects.html" target="_blank" class="nav-item nav-link">Projects</a>
+                <a href="#team" class="nav-item nav-link">Team</a>
+                <a href="#testimonial" class="nav-item nav-link">Testimonial</a>
+                <a href="#contact" class="nav-item nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+    
+    <!-- Header Start -->
+    <div style="background-color:white ;" class="container-fluid  my-6 mt-0" id="home">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                    <h3 class="text-primary mb-3">I'm</h3>
+                    <h1 class="display-3 mb-3">Chishibe Kabwe</h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">Data Analyst, Web Developer, Front End Developer, Back End Developer, Database Administrator, Information Systems Developer, intermediate Accountant.</div>
+                    <div class="d-flex align-items-center pt-5">
+                        <a target="_blank" href="./pdf/Chishibe Kabwe Student Resume.pdf" class="btn btn-primary py-3 px-4 me-5">Download CV</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 main-image">
+                    <img style="border-radius: 8px; margin-top:10px; width: 350px;" class="img-fluid" src="./img/Profile-White-background.PNG" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+
+     <!-- Video Modal Start -->
+    <div class="modal modal-video fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-0">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Youtube Video</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- 16:9 aspect ratio -->
+                    <div class="ratio ratio-16x9">
+                        <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                            allow="autoplay"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Modal End -->
+
+
+     <!-- About Start -->
+    <div class="container-xxl py-6" id="about">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="years flex-shrink-0 text-center me-4">
+                            <h1 class="display-1 mb-0">3</h1>
+                            <h5 class="mb-0">Years</h5>
+                        </div>
+                        <h3 class="lh-base mb-0">of working experience as a web designer & developer</h3>
+                    </div>
+                    <p class="mb-4">Transforming concepts into digital reality. I am a digital alchemist blending creativity and code. As a 
+                      software developer, I craft solutions that transcend the ordinary, bringing ideas to life. Join
+                    </p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>Afordable Prices</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>High Quality Product</p>
+                    <p class="mb-3"><i class="far fa-check-circle text-primary me-3"></i>On Time Project Delivery</p>
+                    <a class="btn btn-primary py-3 px-5 mt-3" href="">Read More</a>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <!-- <div class="row g-3 mb-4">
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/2.JPG" alt="">
+                        </div>
+                        <div class="col-sm-6">
+                            <img class="img-fluid rounded" src="img/Kangwa Chilufya.JPG" alt="">
+                        </div>
+                    </div> -->
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Happy Clients</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">12</h2>
+                    </div>
+                    <p class="mb-4">Explore teh testimonials from our delighted clients who have experienced the value and excellence I bring to every
+                      project. Their positive feedback is testament to my commitment to exceeding expectations and creating lasting partnerships.
+                    </p>
+                    <div class="d-flex align-items-center mb-3">
+                        <h5 class="border-end pe-3 me-3 mb-0">Projects Completed</h5>
+                        <h2 class="text-primary fw-bold mb-0" data-toggle="counter-up">5</h2>
+                    </div>
+                    <p class="mb-0">From concept to completion, I take pride in delivering high quality solutions that meet
+                      and exceed my clients expectations.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- About End -->
+
+  
+
+        <!-- Expertise Start -->
+    <div class="container-xxl py-6 pb-5" id="skill">
+        <div class="container">
+            <div class="row g-5">
+                <div  class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div><img style="width:50px; top:15px;" src="./icons/cj-logo.png" alt=""></div>
+                    <h1 class="display-5 mb-5">Skills & Experience</h1>
+                    <h3 class="mb-4">Programming Languages & Technologies</h3>
+                    <br>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">HTML & CSS</h6>
+                                    <h6 class="font-weight-bold">87%%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="87" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Bootstrap, Sass</h6>
+                                    <h6 class="font-weight-bold">74%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="74" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">JavaScript</h6>
+                                    <h6 class="font-weight-bold">56%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="56" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                             <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">MongoDB, MySQL Server</h6>
+                                    <h6 class="font-weight-bold">71%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Numpy, Pandas</h6>
+                                    <h6 class="font-weight-bold">27%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="27" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                             <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Adobe Photoshop & Express</h6>
+                                    <h6 class="font-weight-bold">78%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="78" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Touch Typing 50WPM</h6>
+                                    <h6 class="font-weight-bold">89%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-success" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Bash & PowerShell CLI</h6>
+                                    <h6 class="font-weight-bold">89%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">React JS</h6>
+                                    <h6 class="font-weight-bold">40%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Node & Express JS</h6>
+                                    <h6 class="font-weight-bold">39%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="39" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Python</h6>
+                                    <h6 class="font-weight-bold">59%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="59" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                             <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Firebase, Cloud Firestore</h6>
+                                    <h6 class="font-weight-bold">48%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="71" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                             <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">Vim, Neovim TextEditor</h6>
+                                    <h6 class="font-weight-bold">97%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-valuenow="97" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            <div class="skill mb-4">
+                                <div class="d-flex justify-content-between">
+                                    <h6 class="font-weight-bold">SQL</h6>
+                                    <h6 class="font-weight-bold">88%</h6>
+                                </div>
+                                <div class="progress">
+                                    <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                             
+                            
+                        </div>
+                    </div>
+                </div>
+ 
+                <!--Education-->
+                <div>
+                    <br>
+                    <br>
+                    <h1 class="display-5 mb-5">Education</h1>
+                     <h5 class="mb-4 word-color">THE COPPERBELT UNIVERSITY 2024 - PRESENT</h5>
+                     <h5 class="mb-4 word-color">BACHELOR OF SCIENCE IN INFORMATION SYSTEMS</h5>
+                    <p>Currently pursuing a degree in information systems focusing on software development,database management,data Science & analytics,system analysis,project management and how to align information technology in the business and corprate world. </p>
+                </div>
+                <br>
+                <br>
+
+                <div>
+                    <br>
+                    <br>
+                     <h5 class="mb-4 word-color">LUANSHYA BOYS SECONDARY SCHOOL (LBSS) 2019 - 2021</h5>
+                     <h5 class="mb-4 word-color">SECONDARY SCHOOL CERTIFICATE</h5>
+                     <p>One of most challenging yet transformative phases of my academic journey, Here l learned to thrive under strict routines,peer pressure, and high expectations, building mental toughness and self reliance. </p> 
+                </div>
+                <br>
+                <br>
+
+                <div>
+                    <br>
+                    <br>
+                     <h5 class="mb-4 word-color">LUANSHYA TRUCT SCHOOL (LTS) 2009 - 2018</h5>
+                     <h5 class="mb-4 word-color">PRIMARY AND SECONDARY EDUCATION</h5>
+                <p>Attended a top-tier institution known for its rigorous academic standards in Luanshya. Here l built a strong foundation in literacy, critical thinking, and analytical skills.</p>
+                </div>
+                <br>
+                <br>
+
+                <div>
+                    <br>
+                    <br>
+                     <h5 class="mb-4 word-color">LION KING PRIMARY SCHOOL 2006 - 2009</h5>
+                     <h5 class="mb-4 word-color">EARLY CHILDHOOD EDUCATION</h5>
+                <p>Here I had a early childhood education which focused on reading skills,social interaction and foundational learning.</p>
+                </div>
+                <br>
+                <br>
+
+                <div>
+                    <br>
+                    <br>
+                    <h1 class="display-5 mb-5">Hobbies & Interests</h1>
+                    <ul>
+                        <li style="color:#6244C5; font-weight:900;">Basketball</li>
+                        <li style="color:#6244C5; font-weight:900;">Learning and Reading</li>
+                        <li style="color:#6244C5; font-weight:900;">Coding</li>
+                        <li style="color:#6244C5; font-weight:900;">Table Tennis</li>
+                    </ul>
+                </div>
+
+               
+                
+                <!--Additional Qualification-->
+                <div>
+                    <br>
+                    <br>
+                    <h1 class="display-5 mb-5">Additional Qualification</h1>
+                    <h5 class="mb-4 word-color">ZRA TAX APPRECIATION COURSE</h5>
+                    <p>In this course, I arquired a fundamental understanding of the various tax types administered by ZRA. I gained basic knowledge of ZRA tax processes, which enhanced my comprehension of how taxes in Zambia work.</p>
+                    <a style="border-radius: 20px; color:#6244C5; border-color:#6244C5" target="_blank" class="btn btn-outline" href="./pdf/Kabwe Chishibe ZRA Tax Appreciation Course Certification.pdf">Print Certificate</a>
+                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Expertise End -->
+
+<!-- Service Start -->
+    <div class="container-fluid bg-light my-5 py-6" id="service">
+        <div class="container">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Services</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="https://wa.me/+260966498398/">Hire Me</a>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-chart fa-2x text-dark"><img style="width: 40px;" src="./icons/bar-chart.svg" alt=""></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Business Inteligence & Data Analysis</h4>
+                            <span>Unlock the power of your data with our comprehensive data analysis services. From raw data to
+                                    actionable insights, we leverage advanced analytics tools and techniques to extract meaningful
+                                    patterns, trends, and correlations. I am an expert in data cleaning, statistical analysis, and
+                                    visualization, providing you with a clear understanding of your data landscape. Whether you're
+                                    seeking to optimize processes, make informed decisions, or drive strategic initiatives, My data
+                                    analysis services are tailored to meet your specific needs. Transform your data into a valuable
+                                    asset and gain a competitive edge with our proficient data analysis solutions.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Web Development</h4>
+                            <span>Unlock the full potential of your online presence with My expert web development services. I
+                                    specialize in creating dynamic, responsive, and visually stunning websites tailored to your unique
+                                    needs. From robust backend functionality to intuitive user interfaces, l bring your digital vision to
+                                    life. Whether it's a sleek portfolio, a powerful e-commerce platform, or a custom web application,
+                                    l’m here to elevate your online experience. Let's build something amazing together!
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-code fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Mobile Application Development</h4>
+                            <span>Unlocking the potential of your ideas with My top-notch mobile app development services. I
+                                    specialize in crafting seamless and intuitive applications for iOS and Android platforms. From
+                                    conceptualization to deployment, l ensure a user-centric approach, leveraging the latest
+                                    technologies to deliver high-performance, feature-rich mobile apps. Let's transform your vision
+                                    into a cutting-edge mobile experience!
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-cod fa-2x text-dark"><img style="width: 40px;" src="./icons/buildings.svg" alt=""></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Accounting Services</h4>
+                            <span>Unlock financial clarity with my comprehensive accounting services. From meticulous
+                                    bookkeeping to strategic financial planning, l tailor my expertise to meet your business needs.
+                                    My dedication ensures accuracy, compliance, and actionable insights, empowering you to make
+                                    informed decisions and drive financial success.
+                                    Services:
+                                    <ul>
+                                      <li>Bookkeeping and Financial Reporting</li>
+                                      <li>Tax Planning and Compliance</li>
+                                      <li>Budgeting and Forecasting</li>
+                                      <li>Financial Analysis and Consultation</li>
+                                    </ul>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-cod fa-2x text-dark"><img style="width: 40px;" src="./icons/database-check.svg" alt=""></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Database Design & Administration</h4>
+                            <span>
+                                I specialize in comprehensive database design and administration services. My expert team
+                                leverages cutting-edge technologies to create robust and scalable database solutions tailored to
+                                your specific needs. From conceptualization to optimization, l ensure efficient data management,
+                                seamless integration, and top-notch security. Trust me to architect, implement, and maintain
+                                databases that form the backbone of your digital infrastructure. Let's elevate your data
+                                management to the next level.
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-laptop-cod fa-2x text-dark"><img style="width: 40px;" src="./icons/person-fill-check.svg" alt=""></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Information Systems Development</h4>
+                            <span>
+                                Transform your concepts into powerful information systems with My dedicated development
+                                expertise. I specialize in crafting robust and scalable solutions tailored to your unique
+                                requirements. From database design to seamless integration, l ensure a smooth development
+                                process, delivering information systems that empower your business. Elevate your digital
+                                presence with My comprehensive Information Systems Development services.
+                                <ul>
+                                  <li>Custom Software Development</li>
+                                  <li>Database Design and Optimization</li>
+                                  <li>System Integration Solutions</li>
+                                  <li>Scalable and Secure Architectures</li>
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                   <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="service-item d-flex flex-column flex-sm-row bg-white rounded h-100 p-4 p-lg-5">
+                        <div class="bg-icon flex-shrink-0 mb-3">
+                            <i class="fa fa-pencil-alt fa-2x text-dark"></i>
+                        </div>
+                        <div class="ms-sm-4">
+                            <h4 class="mb-3">Graphic Design Services</h4>
+                            <span>
+                            My Graphic Design services are dedicated to bringing your brand's story to life with stunning visuals that resonate with your 
+                            audience. Whether you're looking to launch a new product or refresh your brand image, I have got you covered.
+                        </span><br>
+                        <ul>
+                            <li><strong>Posters: </strong>Capture attention with custom-designed posters that make a statement.</li>
+                            <li><b>Flyers: </b> Spread the word with stylish flyers that convey your message with clarity.</li>
+                            <li><strong>And More: </strong>From brochures,business cards to social media graphics, we provide a full suite of design solutions to meet all your needs.</li>
+
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+        <!-- Projects Start -->
+    <div  class="container-xxl py-6 pt-5" id="project">
+        <div style="padding:5px" class="container">
+            <div class="row g-5 mb-5 align-items-center wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">My Projects</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <ul class="list-inline mx-n3 mb-0" id="portfolio-flters">
+                        <a target="_blank" href="./Projects.html" class="mx-3 active" data-filter="*">All Projects</a>
+                        <!-- <li class="mx-3" data-filter=".first">UI/UX Design</li>
+                        <li class="mx-3" data-filter=".second">Graphic Design</li> -->
+                    </ul>
+                </div>
+            </div>
+            <div class="row g-4 portfolio-container wow fadeInUp" data-wow-delay="0.1s">
+                <!--Project Card 1-->
+                <div style="border: 2px solid #FFC448; padding:10px; border-radius: 9px;" class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/Projects-1.PNG" alt="">
+                    </div>
+                    <!--button-->
+                    <div style="display: flex; margin-top:8px;">
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/Project cover - Major's Electronic Hub.png" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+                <!--Project Card 2-->
+                <div style="border: 2px solid #FFC448; padding:10px; border-radius: 9px; " class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/Projects-2.PNG" alt="">
+                    </div>
+                    <!--button-->
+                    <div style="display: flex; margin-top:8px;">
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/Project cover - Kay Graphics.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+                <!--Project Card 3-->
+                <div style="border: 2px solid #FFC448; padding:10px; border-radius: 9px;" class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/Projects-3.PNG" alt="">
+                    </div>
+                    <!--button-->
+                    <div style="display: flex; margin-top:8px;">
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/Project cover - Music site.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+                <!-- Project Card 4
+                <div style="border: 2px solid #FFC448; padding:10px; border-radius: 9px;" class="col-lg-4 col-md-6 portfolio-item first">
+
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/Chishibe’s Resume7-project 4.PNG" alt="">
+                    </div>
+                    button
+                    <div style="display: flex; margin-top:8px;">
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/Project cover - chishibe's resume 7.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+                Project Card 5
+                <div style="border: 2px solid #FFC448; padding:10px; border-radius: 9px;" class="col-lg-4 col-md-6 portfolio-item first">
+                    <div class="portfolio-img rounded overflow-hidden">
+                        <img class="img-fluid" src="img/Chishibe’s Resume24-project 5.PNG" alt="">
+                    </div>
+                    button
+                    <div style="display: flex; margin-top:8px;">
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href="img/Project cover - Chishibe's Resume 24.jpg" data-lightbox="portfolio"><i class="fa fa-eye"></i></a>
+                        <a class="btn btn-lg-square btn-outline-secondary border-2 mx-1" href=""><i class="fa fa-link"></i></a>
+                    </div> -->
+                </div>
+                <div>
+                    <h4 class="wow fadeInUp" data-wow-delay="data-wow-delay=" style="margin-top:50px; margin-bottom:20px; color:gray">See all my projects</h4>
+                    <a target="_blank" href="./Projects.html" class="project-button">Projects</a>
+                </div>
+                </div>
+        </div>
+    </div>
+    <!-- Projects End -->
+
+   
+
+     <!-- Testimonial Start -->
+    <div class="container-fluid bg-light py-5 my-5" id="testimonial">
+        <div class="container-fluid py-5">
+            <h1 class="display-5 text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">Testimonial</h1>
+            <div class="row justify-content-center">
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-left h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/Testimony-Mfuta.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/Testimony-kangwa.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/Testimony-JR.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/Testimony-Mfuta.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">Working with this software developer was a game-changer for our project <a style="color: #6244C5;" href="https://major-s-electronic-hub.web.app/">Major's Electronic Hub</a>His coding resulted in a seamless and efficient solution. His level of professionalism
+                            and innovation exceeded our expectations. I highly recommend him for any Development needs. </p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Kabwe Mfuta</h5>
+                            <span>IT Specialist</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/Testimony-kangwa.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">This software developer went above and beyond in crafting a visually stunning and user-friendly Graphic site <a style="color: #6244C5;" href="https://kay-graphics.web.app">Kay Graphics</a>, for my business. The collaboration was seamless, and the final product exceeded my expectations.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>Chilufya Kangwa</h5>
+                            <span>Graphic Designer</span>
+                        </div>
+                        <div class="testimonial-item text-center">
+                            <div class="position-relative mb-5">
+                                <img class="img-fluid rounded-circle border border-secondary p-2 mx-auto" src="img/Testimony-JR.jpg" alt="">
+                                <div class="testimonial-icon">
+                                    <i class="fa fa-quote-left text-primary"></i>
+                                </div>
+                            </div>
+                            <p class="fs-5 fst-italic">This developer turned my music dream into a kiler website! <a style="color: #6244C5;" href=" https://b-dangerous-empire-414b1.web.app">music site</a> Seriously! the site is not visually appealing but user-friendly too. I highly recommend him.</p>
+                            <hr class="w-25 mx-auto">
+                            <h5>JR</h5>
+                            <span>Musical Artist</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 d-none d-lg-block">
+                    <div class="testimonial-right h-100">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.1s" src="img/Testimony-Mfuta.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.3s" src="img/Testimony-kangwa.jpg" alt="">
+                        <img class="img-fluid wow fadeIn" data-wow-delay="0.5s" src="img/Testimony-JR.jpg" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+     <!-- Contact Start -->
+    <div class="container-xxl pb-5" id="contact">
+        <div class="container py-5">
+            <div class="row g-5 mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="col-lg-6">
+                    <h1 class="display-5 mb-0">Let's Work Together</h1>
+                </div>
+                <div class="col-lg-6 text-lg-end">
+                    <a class="btn btn-primary py-3 px-5" href="">Say Hello</a>
+                </div>
+            </div>
+            <div class="row g-5">
+                <div class="col-lg-5 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <p class="mb-2">My office:</p>
+                    <h3 class="fw-bold">Section 1/9 Roan Luanshya,Copperbelt,Zambia.</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Call me:</p>
+                    <h3 class="fw-bold">+260 966498398</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Mail me:</p>
+                    <h3 class="fw-bold">chishibekabwe7@gmail.com</h3>
+                    <h3 class="fw-bold">chishibekabwe.ck@gmail.com</h3>
+                    <hr class="w-100">
+                    <p class="mb-2">Follow me:</p>
+                    <div class="d-flex pt-2">
+                        <a target="_blank" class="btn btn-square btn-primary me-2" href="https://twitter.com/ChishibeKabwe24"><i class="fab fa-twitter"></i></a>
+                        <a target="_blank" class="btn btn-square btn-primary me-2" href="https://web.facebook.com/chishibe.cbkabwe.1"><i class="fab fa-facebook-f"></i></a>
+                        <a target="_blank" class="btn btn-square btn-primary me-2" href="https://www.instagram.com/chishibe_kabwe24/"><i class="fab fa-instagram"></i></a>
+                        <a target="_blank" class="btn btn-square btn-primary me-2" href="https://www.linkedin.com/in/chishibe-kabwe-7734502ab/"><i class="fab fa-linkedin-in"></i></a>
+                        <a target="_blank" class="btn btn-square btn-primary me-2" href="https://github.com/chishibekabwe7"><i class="fab fa-github"></i></a>
+                        <a target="_blank" class="btn btn-square btn-primary me-2" href="https://stackoverflow.com/users/21120957/chishibe-kabwe"><i class="fab fa-stack-overflow"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-7 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <form>
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name">
+                                    <label for="name">Your Name</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email">
+                                    <label for="email">Your Email</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                    <label for="subject">Subject</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 100px"></textarea>
+                                    <label for="message">Message</label>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <a  class="btn btn-primary py-3 px-5"  href="mailto:chishibekabwe7@gmail.com">Send Message</a>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Contact End -->
+
+       <!-- Copyright Start -->
+    <div class="container-fluid bg-dark text-white py-4">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; Chishibe Kabwe's Resume All Right Reserved | 2024.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Developed at <a target="_blank" href="https://chishibes-organization.web.app"><span class="text-primary">Chishibe’s Organization</span></a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+</body>
+<!-- JavaScript Libraries -->
+    <script src="./firebase.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Main Javascript File-->
+    <script src="js/main.js"></script>
+</html>
+
+<!-- ================================================= Developed at Chishibe's Org =================================================== -->
