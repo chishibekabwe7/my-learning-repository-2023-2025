@@ -1,8 +1,12 @@
 :root {
   --jumbotron-padding-y: 3rem;
+  --primary: #E91E8C;
+  --primary-light: #FF6EC7;
+  --primary-dark: #B0006A;
+  --primary-bg: rgba(233, 30, 140, 0.08);
 }
 .home-button {
-  background-color: #FF2989;
+  background-color: var(--primary);
   color: white;
 }
 .background {
@@ -17,15 +21,15 @@
  color: #ffffff;
 }
 .primary-background-color {
- background-color: #FF2989;;
+ background-color: var(--primary);
 }
 .card-border {
   border-style: none;
 }
 .icon-container {
-  background-color: #FF2989;
+  background-color: var(--primary);
   color: #ffffff;
-  border-color: #FF2989;
+  border-color: var(--primary);
 }
 .project-button{
 	border-radius: 23px;
@@ -35,21 +39,21 @@
 	padding-right: 70px;
 	color: white;
 	font-weight: bold;
-	background-color: rgb(255, 0, 85);
+	background-color: var(--primary);
     border-style: none;
 }
 .project-button:hover{
-	background-color: rgb(255, 0, 85);
-    border-color: rgb(255, 0, 85);
+	background-color: var(--primary-light);
+  border-color: var(--primary-light);
     color: white;
-    box-shadow: 3px 3px 29px rgba(255, 0, 85, 10);
+  box-shadow: 3px 3px 29px rgba(233, 30, 140, 0.3);
 	transition: 0.8s;
 }
 .project-button:active{
-	background-color: rgb(255, 0, 85);
-    border-color: rgb(255, 0, 85);
+	background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
     color: white;
-    box-shadow: 3px 3px 29px rgba(255, 0, 85, 10);
+  box-shadow: 3px 3px 29px rgba(233, 30, 140, 0.3);
     transform: translateY(-2px);
 }
 .jumbotron {

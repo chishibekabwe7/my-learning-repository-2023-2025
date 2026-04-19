@@ -495,7 +495,7 @@
         <h1 class="display-5 mb-5">Education</h1>
 
         <div class="edu-card">
-            <div class="edu-logo" style="background:#003580;">CBU</div>
+            <div class="edu-logo" data-initials="CBU" style="background: var(--primary-dark);">CBU</div>
             <div class="edu-details">
                 <h3 class="edu-institution">The Copperbelt University</h3>
                 <p class="edu-degree">Bachelor of Science in Information Systems - Leveraging Technology for Business Solutions</p>
@@ -514,7 +514,13 @@
         </div>
 
         <div class="edu-card">
-            <div class="edu-logo" style="background:#A51C30;">H</div>
+            <div class="edu-logo" data-initials="H" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/harvard.edu"
+                  alt="Harvard Online"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="edu-details">
                 <h3 class="edu-institution">Harvard Online</h3>
                 <p class="edu-degree">Professional &amp; Course Certifications - Business and Information Technology</p>
@@ -533,7 +539,13 @@
         </div>
 
         <div class="edu-card">
-            <div class="edu-logo" style="background:#1BA0D7;">C</div>
+            <div class="edu-logo" data-initials="C" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/cisco.com"
+                  alt="Cisco Networking Academy"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="edu-details">
                 <h3 class="edu-institution">Cisco Networking Academy</h3>
                 <p class="edu-degree">Professional &amp; Course Certifications - Computer Systems Networking and Telecommunications</p>
@@ -552,7 +564,13 @@
         </div>
 
         <div class="edu-card">
-            <div class="edu-logo" style="background:#0056D2;">Co</div>
+            <div class="edu-logo" data-initials="Co" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/coursera.org"
+                  alt="Coursera"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="edu-details">
                 <h3 class="edu-institution">Coursera</h3>
                 <p class="edu-degree">Professional &amp; Course Certifications - Information Technology with Business Studies</p>
@@ -575,7 +593,7 @@
         </div>
 
         <div class="edu-card">
-            <div class="edu-logo" style="background:#2e7d32;">LB</div>
+            <div class="edu-logo" data-initials="LB" style="background: var(--primary-dark);">LB</div>
             <div class="edu-details">
                 <h3 class="edu-institution">Luanshya Boys Secondary School (LBSS)</h3>
                 <p class="edu-degree">Secondary School Certificate</p>
@@ -589,7 +607,7 @@
         </div>
 
         <div class="edu-card">
-            <div class="edu-logo" style="background:#5e35b1;">LT</div>
+            <div class="edu-logo" data-initials="LT" style="background: var(--primary-dark);">LT</div>
             <div class="edu-details">
                 <h3 class="edu-institution">Luanshya Trust School (LTS)</h3>
                 <p class="edu-degree">Primary and Junior Secondary Education</p>
@@ -604,14 +622,24 @@
 
     <!-- Courses Start -->
     <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s" id="courses">
-        <h2 class="section-title">Courses</h2>
+        <div class="courses-section-header">
+            <h2 class="section-title">Courses</h2>
+            <div class="courses-global-controls">
+                <button type="button" class="btn-expand-all" onclick="expandAllCourses()">Expand All</button>
+                <button type="button" class="btn-collapse-all" onclick="collapseAllCourses()">Collapse All</button>
+            </div>
+        </div>
 
         <div class="courses-group">
-            <h4 class="courses-group-title">
-                <span class="courses-group-badge" style="background:#003580">CBU</span>
-                The Copperbelt University
-            </h4>
-            <ul class="course-list">
+            <div class="courses-group-header" onclick="toggleCourseGroup(this)">
+                <h4 class="courses-group-title">
+                    <span class="courses-group-badge" style="background: var(--primary);">CBU</span>
+                    The Copperbelt University
+                    <span class="course-count">(12 courses)</span>
+                </h4>
+                <button type="button" class="courses-toggle-btn" aria-expanded="false">Show Courses <span class="toggle-arrow">▾</span></button>
+            </div>
+            <ul class="course-list collapsed">
                 <li class="course-item"><span class="course-name">Introduction to Information Systems</span><span class="course-code">IS&#8226;110</span></li>
                 <li class="course-item"><span class="course-name">Introduction to Data Structures &amp; Algorithms</span><span class="course-code">IS&#8226;130</span></li>
                 <li class="course-item"><span class="course-name">Business Communication</span><span class="course-code">BS&#8226;151</span></li>
@@ -628,21 +656,29 @@
         </div>
 
         <div class="courses-group">
-            <h4 class="courses-group-title">
-                <span class="courses-group-badge" style="background:#A51C30">H</span>
-                Harvard Online
-            </h4>
-            <ul class="course-list">
+            <div class="courses-group-header" onclick="toggleCourseGroup(this)">
+                <h4 class="courses-group-title">
+                    <span class="courses-group-badge" style="background: var(--primary);">H</span>
+                    Harvard Online
+                    <span class="course-count">(1 course)</span>
+                </h4>
+                <button type="button" class="courses-toggle-btn" aria-expanded="false">Show Courses <span class="toggle-arrow">▾</span></button>
+            </div>
+            <ul class="course-list collapsed">
                 <li class="course-item"><span class="course-name">Introduction to Computer Science</span><span class="course-code">CS&#8226;50</span></li>
             </ul>
         </div>
 
         <div class="courses-group">
-            <h4 class="courses-group-title">
-                <span class="courses-group-badge" style="background:#1BA0D7">C</span>
-                Cisco Networking Academy
-            </h4>
-            <ul class="course-list">
+            <div class="courses-group-header" onclick="toggleCourseGroup(this)">
+                <h4 class="courses-group-title">
+                    <span class="courses-group-badge" style="background: var(--primary);">C</span>
+                    Cisco Networking Academy
+                    <span class="course-count">(8 courses)</span>
+                </h4>
+                <button type="button" class="courses-toggle-btn" aria-expanded="false">Show Courses <span class="toggle-arrow">▾</span></button>
+            </div>
+            <ul class="course-list collapsed">
                 <li class="course-item"><span class="course-name">Computer Basics</span><span class="course-code"></span></li>
                 <li class="course-item"><span class="course-name">Digital Awareness</span><span class="course-code"></span></li>
                 <li class="course-item"><span class="course-name">Engaging Stakeholders for Success</span><span class="course-code"></span></li>
@@ -655,11 +691,15 @@
         </div>
 
         <div class="courses-group">
-            <h4 class="courses-group-title">
-                <span class="courses-group-badge" style="background:#0056D2">Co</span>
-                Coursera / Partner Universities
-            </h4>
-            <ul class="course-list">
+            <div class="courses-group-header" onclick="toggleCourseGroup(this)">
+                <h4 class="courses-group-title">
+                    <span class="courses-group-badge" style="background: var(--primary);">Co</span>
+                    Coursera / Partner Universities
+                    <span class="course-count">(7 courses)</span>
+                </h4>
+                <button type="button" class="courses-toggle-btn" aria-expanded="false">Show Courses <span class="toggle-arrow">▾</span></button>
+            </div>
+            <ul class="course-list collapsed">
                 <li class="course-item"><span class="course-name">Introduction to Finance and Financial Accounting</span><span class="course-code">University of Pennsylvania</span></li>
                 <li class="course-item"><span class="course-name">Introduction to Front-End Development</span><span class="course-code">Meta</span></li>
                 <li class="course-item"><span class="course-name">Introduction to Structured Query Language</span><span class="course-code">University of Michigan</span></li>
@@ -676,7 +716,13 @@
         <h1 class="display-5 mb-5">Certifications / Additional Qualifications</h1>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#003a70;">UC</div>
+            <div class="cert-logo" data-initials="UC" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/ucsd.edu"
+                  alt="UC San Diego"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Object-Oriented Programming in Java</h3>
                 <p class="cert-issuer">UC San Diego / Coursera</p>
@@ -693,7 +739,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#4285F4;">G</div>
+            <div class="cert-logo" data-initials="G" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/google.com"
+                  alt="Google Digital Academy"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Google Analytics Certification</h3>
                 <p class="cert-issuer">Google Digital Academy (Skillshop)</p>
@@ -709,7 +761,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#A51C30;">H</div>
+            <div class="cert-logo" data-initials="H" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/harvard.edu"
+                  alt="Harvard Online"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">CS50x Certificate</h3>
                 <p class="cert-issuer">Harvard Online</p>
@@ -731,7 +789,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#333;">T</div>
+            <div class="cert-logo" data-initials="T" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/typing.com"
+                  alt="Typing.com"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Touch Typing Certificate (52 WPM)</h3>
                 <p class="cert-issuer">Typing.com</p>
@@ -746,7 +810,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#1BA0D7;">C</div>
+            <div class="cert-logo" data-initials="C" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/cisco.com"
+                  alt="Cisco Networking Academy"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Introduction to Modern AI</h3>
                 <p class="cert-issuer">Cisco Networking Academy</p>
@@ -762,7 +832,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#1BA0D7;">C</div>
+            <div class="cert-logo" data-initials="C" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/cisco.com"
+                  alt="Cisco Networking Academy"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Getting Started with Cisco Packet Tracer</h3>
                 <p class="cert-issuer">Cisco Networking Academy</p>
@@ -777,7 +853,7 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#003580;">IC</div>
+            <div class="cert-logo" data-initials="IC" style="background: var(--primary-dark);">IC</div>
             <div class="cert-details">
                 <h3 class="cert-name">ICTAZ Membership Certificate</h3>
                 <p class="cert-issuer">ICT Association of Zambia</p>
@@ -790,7 +866,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#00C4CC;">Ca</div>
+            <div class="cert-logo" data-initials="Ca" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/canva.com"
+                  alt="Canva"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Canva Graphic Design for Business Visuals</h3>
                 <p class="cert-issuer">Coursera</p>
@@ -806,7 +888,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#0866FF;">M</div>
+            <div class="cert-logo" data-initials="M" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/meta.com"
+                  alt="Meta"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Introduction to Back-End Development</h3>
                 <p class="cert-issuer">Meta</p>
@@ -822,7 +910,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#00274C;">UM</div>
+            <div class="cert-logo" data-initials="UM" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/umich.edu"
+                  alt="University of Michigan"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Introduction to Structured Query Language (SQL)</h3>
                 <p class="cert-issuer">University of Michigan</p>
@@ -840,7 +934,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#0866FF;">M</div>
+            <div class="cert-logo" data-initials="M" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/meta.com"
+                  alt="Meta"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Introduction to Front-End Development</h3>
                 <p class="cert-issuer">Meta</p>
@@ -861,7 +961,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#011F5B;">UP</div>
+            <div class="cert-logo" data-initials="UP" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/upenn.edu"
+                  alt="University of Pennsylvania"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Introduction to Finance and Accounting</h3>
                 <p class="cert-issuer">University of Pennsylvania</p>
@@ -878,7 +984,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#1BA0D7;">C</div>
+            <div class="cert-logo" data-initials="C" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/cisco.com"
+                  alt="Cisco Networking Academy"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Engaging Stakeholders for Success</h3>
                 <p class="cert-issuer">Cisco Networking Academy</p>
@@ -895,7 +1007,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#1BA0D7;">C</div>
+            <div class="cert-logo" data-initials="C" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/cisco.com"
+                  alt="Cisco Networking Academy"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Computer Hardware Basics</h3>
                 <p class="cert-issuer">Cisco Networking Academy</p>
@@ -913,7 +1031,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#1BA0D7;">C</div>
+            <div class="cert-logo" data-initials="C" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/cisco.com"
+                  alt="Cisco Networking Academy"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Python Essentials I</h3>
                 <p class="cert-issuer">Cisco Networking Academy</p>
@@ -929,7 +1053,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#1BA0D7;">C</div>
+            <div class="cert-logo" data-initials="C" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/cisco.com"
+                  alt="Cisco Networking Academy"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Digital Awareness</h3>
                 <p class="cert-issuer">Cisco Networking Academy</p>
@@ -947,7 +1077,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#1BA0D7;">C</div>
+            <div class="cert-logo" data-initials="C" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/cisco.com"
+                  alt="Cisco Networking Academy"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Linux Unhatched</h3>
                 <p class="cert-issuer">Cisco Networking Academy</p>
@@ -965,7 +1101,13 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#00C4CC;">Ca</div>
+            <div class="cert-logo" data-initials="Ca" style="background: var(--primary-dark);">
+                <img
+                  src="https://logo.clearbit.com/canva.com"
+                  alt="Canva"
+                  onerror="this.style.display='none'; this.parentElement.textContent=this.parentElement.dataset.initials;"
+                />
+            </div>
             <div class="cert-details">
                 <h3 class="cert-name">Canva Essentials</h3>
                 <p class="cert-issuer">Canva</p>
@@ -982,7 +1124,7 @@
         </div>
 
         <div class="cert-card">
-            <div class="cert-logo" style="background:#006400;">ZRA</div>
+            <div class="cert-logo" data-initials="ZRA" style="background: var(--primary-dark);">ZRA</div>
             <div class="cert-details">
                 <h3 class="cert-name">ZRA Tax Appreciation Certificate</h3>
                 <p class="cert-issuer">Zambia Revenue Authority (ZRA)</p>
@@ -1001,10 +1143,10 @@
     <section class="py-5 border-bottom wow fadeInUp" data-wow-delay="0.1s">
         <h1 class="display-5 mb-5">Hobbies & Interests</h1>
         <ul>
-            <li style="color:#FF2989; font-weight: 900;">Basketball</li>
-            <li style="color:#FF2989; font-weight: 900;">Learning and Reading</li>
-            <li style="color:#FF2989; font-weight: 900;">Coding</li>
-            <li style="color:#FF2989; font-weight: 900;">Table Tennis</li>
+            <li style="color:var(--primary); font-weight: 900;">Basketball</li>
+            <li style="color:var(--primary); font-weight: 900;">Learning and Reading</li>
+            <li style="color:var(--primary); font-weight: 900;">Coding</li>
+            <li style="color:var(--primary); font-weight: 900;">Table Tennis</li>
         </ul>
     </section>
 
@@ -1135,7 +1277,7 @@
                                 </div>
                                 <div class="row portfolio-container">
                                     <!--Project Card 1-->
-                                    <div style="border: 1px solid #FF2989; padding:10px;" class="col-md-6 mb-4 portfolio-item first">
+                                    <div style="border: 1px solid var(--primary); padding:10px;" class="col-md-6 mb-4 portfolio-item first">
                                         <div class="position-relative overflow-hidden mb-2">
                                             <img class="img-fluid w-100" src="img/1..png" alt="">
                                             <div class="portfolio-btn d-flex align-items-center justify-content-center">
@@ -1150,7 +1292,7 @@
                                         </div>
                                     </div>
                                     <!--Project Card 2-->
-                                    <div style="border: 1px solid #FF2989; padding:10px" class="col-md-6 mb-4 portfolio-item first">
+                                    <div style="border: 1px solid var(--primary); padding:10px" class="col-md-6 mb-4 portfolio-item first">
                                         <div class="position-relative overflow-hidden mb-2">
                                             <img class="img-fluid w-100" src="img/2..png" alt="">
                                             <div class="portfolio-btn d-flex align-items-center justify-content-center">
@@ -1165,7 +1307,7 @@
                                         </div>
                                     </div>
                                     <!--Project Card 3-->
-                                    <div style="border: 1px solid #FF2989; padding:10px" class="col-md-6 mb-4 portfolio-item first">
+                                    <div style="border: 1px solid var(--primary); padding:10px" class="col-md-6 mb-4 portfolio-item first">
                                         <div class="position-relative overflow-hidden mb-2">
                                             <img class="img-fluid w-100" src="img/3..png" alt="">
                                             <div class="portfolio-btn d-flex align-items-center justify-content-center">
@@ -1180,7 +1322,7 @@
                                         </div>
                                     </div>
                                     <!-- Project Card 4
-                                    <div style="border: 1px solid #FF2989; padding:10px" class="col-md-6 mb-4 portfolio-item first">
+                                    <div style="border: 1px solid var(--primary); padding:10px" class="col-md-6 mb-4 portfolio-item first">
                                         <div class="position-relative overflow-hidden mb-2">
                                             <img class="img-fluid w-100" src="img/4.PNG" alt="">
                                             <div class="portfolio-btn d-flex align-items-center justify-content-center">
@@ -1195,7 +1337,7 @@
                                         </div>
                                     </div>
                                     Project Card 5
-                                    <div style="border: 1px solid #FF2989; padding:10px" class="col-md-6 mb-4 portfolio-item first">
+                                    <div style="border: 1px solid var(--primary); padding:10px" class="col-md-6 mb-4 portfolio-item first">
                                         <div class="position-relative overflow-hidden mb-2">
                                             <img class="img-fluid w-100" src="img/5.PNG" alt="">
                                             <div class="portfolio-btn d-flex align-items-center justify-content-center">
@@ -1226,7 +1368,7 @@
                         <div class="owl-carousel testimonial-carousel">
                             <div class="text-left">
                                 <i class="fa fa-3x fa-quote-left mb-4 word-color"></i>
-                                <p class="fs-4 mb-4">Working with this software developer was a game changer for my Business <a style="color: #FF2989;" href="">Major's Electronic Hub</a>. His coding resulted in a seamless and efficient solution. His level of professionalism
+                                <p class="fs-4 mb-4">Working with this software developer was a game changer for my Business <a style="color: var(--primary);" href="">Major's Electronic Hub</a>. His coding resulted in a seamless and efficient solution. His level of professionalism
                             and innovation exceeded our expectations. I highly recommend him for any Development needs.</p>
                                 <div class="d-flex align-items-center">
                                     <img class="img-fluid" src="img/Testimony-Mfuta.jpg" style="width: 60px; height: 60px; border-radius:4px">
@@ -1238,7 +1380,7 @@
                             </div>
                             <div class="text-left">
                                 <i class="fa fa-3x fa-quote-left mb-4 word-color"></i>
-                                <p class="fs-4 mb-4">This software developer went above and beyond in crafting a visually stunning and user-friendly Graphic site <a style="color: #FF2989;" href="">Kay Graphics</a>, for my business. The collaboration was seamless, and the final product exceeded my expectations.</p>
+                                <p class="fs-4 mb-4">This software developer went above and beyond in crafting a visually stunning and user-friendly Graphic site <a style="color: var(--primary);" href="">Kay Graphics</a>, for my business. The collaboration was seamless, and the final product exceeded my expectations.</p>
                                 <div class="d-flex align-items-center">
                                     <img class="img-fluid" src="img/Testimony-kangwa.jpg" style="width: 60px; height: 60px; border-radius:4px">
                                     <div class="ps-3">
@@ -1249,7 +1391,7 @@
                             </div>
                             <div class="text-left">
                                 <i class="fa fa-3x fa-quote-left mb-4 word-color"></i>
-                                <p class="fs-4 mb-4">This developer turned my music dream into a kiler website! <a style="color: #FF2989;" href="">music site</a> Seriously! the site is not visually appealing but user-friendly too. I highly recommend him.</p>
+                                <p class="fs-4 mb-4">This developer turned my music dream into a kiler website! <a style="color: var(--primary);" href="">music site</a> Seriously! the site is not visually appealing but user-friendly too. I highly recommend him.</p>
                                 <div class="d-flex align-items-center">
                                     <img class="img-fluid" src="img/Testimony-JR.jpg" style="width: 60px; height: 60px; border-radius:4px">
                                     <div class="ps-3">
@@ -1294,7 +1436,7 @@
                                     </div>
                                 </div>
                                 <div class="col-12">
-                                    <a style="background-color: #FF2989; color:white;" href="mailto:chishibekabwe7@gmail.com" class="btn w-100 py-3 ">Send Message</a>
+                                    <a style="background-color: var(--primary); color:white;" href="mailto:chishibekabwe7@gmail.com" class="btn w-100 py-3 ">Send Message</a>
                                 </div>
                             </div>
                         </form>
@@ -1314,7 +1456,7 @@
                             </div>
 							
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-							<p class="m-0">&copy; Chishibe Kabwe's Resume All Rights Reserved. Developed at <a target="_blank" href="https://chishibes-organization.web.app"><span style="color:#FF2989">Chishibe’s Organization</span></a>.</p>
+                            <p class="m-0">&copy; Chishibe Kabwe's Resume All Rights Reserved. Developed at <a target="_blank" href="https://chishibes-organization.web.app"><span style="color:var(--primary)">Chishibe’s Organization</span></a>.</p>
                         </div>
                     </section>
                     <!-- Footer End -->
@@ -1342,6 +1484,49 @@
         <!-- Contact Javascript File -->
         <script src="mail/jqBootstrapValidation.min.js"></script>
         <script src="mail/contact.js"></script>
+
+                <script>
+                function toggleCourseGroup(headerEl) {
+                    const list = headerEl.nextElementSibling;
+                    const btn = headerEl.querySelector('.courses-toggle-btn');
+                    const arrow = btn.querySelector('.toggle-arrow');
+                    const isCollapsed = list.classList.contains('collapsed');
+
+                    if (isCollapsed) {
+                        list.classList.remove('collapsed');
+                        btn.setAttribute('aria-expanded', 'true');
+                        btn.childNodes[0].textContent = 'Hide Courses ';
+                        arrow.textContent = '▴';
+                    } else {
+                        list.classList.add('collapsed');
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.childNodes[0].textContent = 'Show Courses ';
+                        arrow.textContent = '▾';
+                    }
+                }
+
+                function expandAllCourses() {
+                    document.querySelectorAll('.course-list').forEach(list => {
+                        list.classList.remove('collapsed');
+                    });
+                    document.querySelectorAll('.courses-toggle-btn').forEach(btn => {
+                        btn.setAttribute('aria-expanded', 'true');
+                        btn.childNodes[0].textContent = 'Hide Courses ';
+                        btn.querySelector('.toggle-arrow').textContent = '▴';
+                    });
+                }
+
+                function collapseAllCourses() {
+                    document.querySelectorAll('.course-list').forEach(list => {
+                        list.classList.add('collapsed');
+                    });
+                    document.querySelectorAll('.courses-toggle-btn').forEach(btn => {
+                        btn.setAttribute('aria-expanded', 'false');
+                        btn.childNodes[0].textContent = 'Show Courses ';
+                        btn.querySelector('.toggle-arrow').textContent = '▾';
+                    });
+                }
+                </script>
 
         <!-- Main Javascript -->
         <script src="js/main.js"></script>

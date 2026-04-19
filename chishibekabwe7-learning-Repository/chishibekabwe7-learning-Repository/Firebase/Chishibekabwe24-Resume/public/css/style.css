@@ -1,6 +1,9 @@
 /********** Template CSS **********/
 :root {
-  --primary: #FF2989;
+  --primary: #E91E8C;
+  --primary-light: #FF6EC7;
+  --primary-dark: #B0006A;
+  --primary-bg: rgba(233, 30, 140, 0.08);
   --secondary: #292929;
   --light: #F2F2F2;
   --dark: #000000;
@@ -25,7 +28,7 @@
   }
 }
 .word-color{
-  color: #FF2989;
+  color: var(--primary);
 }
 .fw-semi-bold {
   font-weight: 600;
@@ -63,7 +66,7 @@
 .btn-sm-square,
 .btn-lg-square :hover {
 color: white;
-background-color: #FF2989;
+background-color: var(--primary);
 border-style: none;
 }
 
@@ -96,7 +99,7 @@ border-style: none;
 }
 
 .back-to-top i:hover {
-  color: rgb(255, 0, 43);
+  color: var(--primary-light);
 }
 
 .back-to-top {
@@ -135,7 +138,7 @@ border-style: none;
   height: 10px;
   bottom: -4px;
   left: 0;
-  border: 2px solid var(--light);
+  border: 2px solid var(--primary);
   border-radius: 10px;
 }
 
@@ -147,7 +150,7 @@ border-style: none;
   bottom: 0;
   left: 15px;
   border-radius: 2px;
-  background: var(--light);
+  background: var(--primary);
 }
 
 .progress {
@@ -157,6 +160,7 @@ border-style: none;
 .progress .progress-bar {
   width: 0px;
   transition: 2s;
+  background-color: var(--primary) !important;
 }
 
 .service-item {
@@ -205,7 +209,7 @@ border-style: none;
   opacity: 2;
   transition: .3s;
   transition-delay: .3s;
-  color:#FF2989;
+  color: var(--primary);
 }
 
 .portfolio-item:hover i {
@@ -215,11 +219,11 @@ border-style: none;
 }
 .portfolio-icons{
   border-radius:5px; 
-  border-color:#FF2989;
+  border-color: var(--primary);
 }
 .portfolio-icons:hover{
-  background-color: #FF2989;
-  border-color: #FF2989;
+  background-color: var(--primary-light);
+  border-color: var(--primary-light);
 }
 
 .testimonial-carousel .owl-dots {
@@ -251,6 +255,7 @@ border-style: none;
   height: 56px;
   min-width: 56px;
   border-radius: 8px;
+  background: var(--primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -293,9 +298,9 @@ border-style: none;
 }
 
 .skill-tag {
-  background: rgba(10,102,194,0.15);
-  color: #7cb7ff;
-  border: 1px solid rgba(10,102,194,0.4);
+  background: var(--primary-bg);
+  color: var(--primary);
+  border: 1px solid rgba(233, 30, 140, 0.3);
   border-radius: 20px;
   padding: 3px 12px;
   font-size: 12px;
@@ -314,12 +319,23 @@ border-style: none;
   height: 56px;
   min-width: 56px;
   border-radius: 8px;
+  background: var(--primary-dark);
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   font-weight: 700;
   font-size: 16px;
+}
+
+.edu-logo img,
+.cert-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #fff;
+  padding: 4px;
 }
 
 .cert-name {
@@ -353,9 +369,9 @@ border-style: none;
   align-items: center;
   gap: 6px;
   padding: 6px 16px;
-  border: 1.5px solid #0a66c2;
+  border: 1.5px solid var(--primary);
   border-radius: 20px;
-  color: #7cb7ff;
+  color: var(--primary);
   font-size: 13px;
   font-weight: 600;
   text-decoration: none;
@@ -364,7 +380,7 @@ border-style: none;
 }
 
 .btn-credential:hover {
-  background: #0a66c2;
+  background: var(--primary);
   color: #fff;
 }
 
@@ -372,8 +388,54 @@ border-style: none;
   padding: 40px 0;
 }
 
+.courses-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.courses-global-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-expand-all,
+.btn-collapse-all {
+  padding: 6px 16px;
+  border-radius: 20px;
+  border: 1.5px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.btn-expand-all:hover,
+.btn-collapse-all:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
 .courses-group {
   margin-bottom: 28px;
+}
+
+.courses-group-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.courses-group-header:hover .courses-group-title {
+  color: var(--primary);
 }
 
 .courses-group-title {
@@ -382,8 +444,37 @@ border-style: none;
   gap: 10px;
   font-size: 15px;
   font-weight: 700;
-  margin-bottom: 12px;
+  margin: 0;
   color: rgba(242,242,242,0.85);
+}
+
+.courses-toggle-btn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1.5px solid var(--primary);
+  background: transparent;
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.courses-toggle-btn:hover {
+  background: var(--primary);
+  color: #fff;
+}
+
+.course-count {
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(242,242,242,0.55);
+  margin-left: 6px;
 }
 
 .courses-group-badge {
@@ -393,14 +484,25 @@ border-style: none;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.5px;
+  background: var(--primary) !important;
 }
 
 .course-list {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 10px 0 0;
   border-left: 3px solid rgba(255,255,255,0.12);
   padding-left: 16px;
+  overflow: hidden;
+  max-height: 1000px;
+  transition: max-height 0.4s ease, opacity 0.3s ease;
+  opacity: 1;
+}
+
+.course-list.collapsed {
+  max-height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .course-item {
