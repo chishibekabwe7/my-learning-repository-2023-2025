@@ -238,3 +238,204 @@ border-style: none;
 .testimonial-carousel .owl-dot.active {
   background: var(--primary);
 }
+
+.edu-card {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.edu-logo {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.edu-institution {
+  margin: 0 0 2px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--light);
+}
+
+.edu-degree {
+  margin: 0 0 2px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(242,242,242,0.88);
+}
+
+.edu-period {
+  margin: 0 0 8px;
+  font-size: 13px;
+  color: rgba(242,242,242,0.65);
+}
+
+.edu-description {
+  font-size: 14px;
+  margin: 0 0 10px;
+  line-height: 1.5;
+  color: rgba(242,242,242,0.8);
+}
+
+.edu-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.skill-tag {
+  background: rgba(10,102,194,0.15);
+  color: #7cb7ff;
+  border: 1px solid rgba(10,102,194,0.4);
+  border-radius: 20px;
+  padding: 3px 12px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.cert-card {
+  display: flex;
+  gap: 16px;
+  padding: 20px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.cert-logo {
+  width: 56px;
+  height: 56px;
+  min-width: 56px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.cert-name {
+  margin: 0 0 2px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--light);
+}
+
+.cert-issuer {
+  margin: 0 0 2px;
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(242,242,242,0.88);
+}
+
+.cert-date {
+  margin: 0 0 2px;
+  font-size: 13px;
+  color: rgba(242,242,242,0.65);
+}
+
+.cert-id {
+  margin: 0 0 10px;
+  font-size: 12px;
+  color: rgba(242,242,242,0.5);
+}
+
+.btn-credential {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border: 1.5px solid #0a66c2;
+  border-radius: 20px;
+  color: #7cb7ff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+  margin-bottom: 10px;
+}
+
+.btn-credential:hover {
+  background: #0a66c2;
+  color: #fff;
+}
+
+#courses {
+  padding: 40px 0;
+}
+
+.courses-group {
+  margin-bottom: 28px;
+}
+
+.courses-group-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: rgba(242,242,242,0.85);
+}
+
+.courses-group-badge {
+  color: #fff;
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.course-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-left: 3px solid rgba(255,255,255,0.12);
+  padding-left: 16px;
+}
+
+.course-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  font-size: 14px;
+}
+
+.course-name {
+  font-weight: 500;
+  color: rgba(242,242,242,0.9);
+}
+
+.course-code {
+  font-size: 12px;
+  color: rgba(242,242,242,0.55);
+  font-family: monospace;
+}
+
+.section-title {
+  margin: 0 0 24px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--light);
+}
+
+.cert-actions {
+  margin-bottom: 6px;
+}
+
+.cert-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
